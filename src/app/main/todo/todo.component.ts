@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoDataService } from './todo-data.service';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   providers: [TodoDataService],
@@ -8,6 +9,8 @@ import { TodoDataService } from './todo-data.service';
   styleUrls: ['./todo.component.sass']
 })
 export class TodoComponent implements OnInit {
+
+  trashIco = faTrash;
 
   newTodo: Todo = new Todo();
 
@@ -32,7 +35,7 @@ export class TodoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  test2 = 'sad';
+  test2 = 'My Todo';
   
 }
 
