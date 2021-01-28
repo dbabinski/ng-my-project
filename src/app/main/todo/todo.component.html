@@ -2,7 +2,7 @@
   <div class="todoapp">
       <header class="header">
           <h1>{{test2}}</h1>
-          <input class="new-todo" placeholder="What to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+          <input class="new-todo ng-valid ng-dirty ng-touched" placeholder="What to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
       </header>
       <section class="main" *ngIf="todos.length > 0">
         <ul class="todo-list">

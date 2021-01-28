@@ -1,10 +1,29 @@
+*
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+h1
+    width: 100%
+    font-size: 4em
+    font-weight: 100
+    text-align: center
+    color: #bb5f5f
+
+.new-todo
+    padding: 16px 16px 16px 60px
+    border: none
+    background: #ffffff00
+    box-shadow: inset 0 -2px 1px rgb(0 0 0 / 5%)
+
+input
+    background-color: blue
+    line-height: 2em
+    &:focus
+        outline: none
+
 .main .todo-list
     margin: 0
     padding: 0
     list-style: none
-
-input
-    line-height: 2em
 
 .toggle 
     height: 1em
@@ -13,6 +32,9 @@ input
     font-size: 1.5em
     text-align: center
     color: #FFF
+    display: inline-block
+label
+    display: inline-block
     
 .container
     margin: 2em
@@ -21,10 +43,10 @@ input
     justify-content: center
 
 .todoapp
-    background-color: #dfdfdf
+    background-color: #fff
     padding: 2em
-    border: 2px solid #cdcdcd
-    border-radius: 15px
+    border-radius: 10px
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 50px 0 rgb(0 0 0 / 10%)
 
 .main
     max-width: 100%
@@ -35,18 +57,30 @@ ul
         bottom: 0.8em
     
 li
-    background-color: #cdcdcd
-    border-radius: 5px
     margin: 0.5em
-    display: flex
-    justify-content: space-around
-    text-align: center
+    box-shadow: inset 0 -2px 1px rgb(0 0 0 / 5%)
     *
         padding:
                 left: 1em
                 right: 1em
+    label
+        padding: 15px 60px 15px 15px
+        margin-left: 0em
+        line-height: 1.2
+        transition: color 0.4s background-color 2s
+        min-width: 15em
+    &.completed
+        label
+            text-decoration: line-through
+            color: #979797
+    &:hover
+        background-color: #f7f7f7
+
+.view
+    display: inline-block
 
 button
+    right: 1em
     background-color: Transparent
     border: none
     &:active
@@ -55,3 +89,10 @@ button
     &:focus
         background-color: Transparent
         border: none
+        outline: none
+
+
+.destroy
+    color: #b87676
+    &:hover
+        color: #dc2828
